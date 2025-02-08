@@ -1,0 +1,75 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Overall layout */
+#container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Simulation area styling */
+#simulation {
+  flex: 3;
+  background: #eaeaea;
+  position: relative;
+}
+
+/* Controls sidebar styling */
+#controls {
+  flex: 1;
+  background: #fff;
+  border-left: 1px solid #ccc;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#controls h1 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.control-group {
+  margin-bottom: 15px;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.control-group input[type="range"],
+.control-group select {
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  width: 100%;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.instructions {
+  margin-top: 20px;
+}
+
+.instructions h2 {
+  margin-bottom: 10px;
+}
+
+.instructions ul {
+  list-style: disc;
+  padding-left: 20px;
+  line-height: 1.5;
+}
