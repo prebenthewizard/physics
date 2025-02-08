@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Newton's Laws Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <!-- Simulation area -->
+    <div id="simulation">
+      <!-- The Matter.js renderer will use this canvas -->
+      <canvas id="world"></canvas>
+    </div>
+    <!-- Controls and instructions -->
+    <div id="controls">
+      <h1>Newton's Laws Simulator</h1>
+      <p>Demonstrating Newton's Laws of Motion</p>
+      
+      <div class="control-group">
+        <label for="modeSelect">Interaction Mode:</label>
+        <select id="modeSelect">
+          <option value="drag">Drag (Newton's First Law)</option>
+          <option value="force">Apply Force (Newton's Second Law)</option>
+        </select>
+      </div>
+      
+      <div class="control-group">
+        <label for="forceSlider">Force Magnitude: <span id="forceValue">0.05</span></label>
+        <input type="range" id="forceSlider" min="0.01" max="0.2" step="0.01" value="0.05">
+      </div>
+      
+      <div class="control-group">
+        <label for="massSlider">Object Mass: <span id="massValue">10</span></label>
+        <input type="range" id="massSlider" min="1" max="50" step="1" value="10">
+      </div>
+      
+      <div class="control-group">
+        <label for="frictionSlider">Object Friction: <span id="frictionValue">0.05</span></label>
+        <input type="range" id="frictionSlider" min="0" max="0.1" step="0.005" value="0.05">
+      </div>
+      
+      <div class="control-group">
+        <label for="gravitySlider">Gravity (Y): <span id="gravityValue">1</span></label>
+        <input type="range" id="gravitySlider" min="0" max="2" step="0.1" value="1">
+      </div>
+      
+      <div class="control-group">
+        <button id="spawnButton">Spawn New Ball</button>
+      </div>
+      
+      <div class="instructions">
+        <h2>Instructions</h2>
+        <ul>
+          <li><strong>Drag Mode:</strong> Click and drag objects to move them. They will continue moving in a straight line until acted upon (Newton's First Law).</li>
+          <li><strong>Force Mode:</strong> Click on an object and drag to apply a force. The red arrow shows the drag direction (and therefore the force direction) scaled by the slider (Newton's Second and Third Laws).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Matter.js library (from CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+  <!-- Our custom simulation code -->
+  <script src="script.js"></script>
+</body>
+</html>
